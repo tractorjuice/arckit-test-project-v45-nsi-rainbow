@@ -1,5 +1,5 @@
 {
-  "generated": "2026-02-13T12:00:00Z",
+  "generated": "2026-02-13T14:00:00Z",
   "repository": {
     "owner": "tractorjuice",
     "name": "arckit-test-project-v45-nsi-rainbow",
@@ -40,6 +40,12 @@
           "title": "Risk Register",
           "category": "Governance",
           "documentId": "ARC-001-RISK-v1.0"
+        },
+        {
+          "path": "projects/001-core-banking-migration/ARC-001-RSCH-v1.0.md",
+          "title": "Research Findings",
+          "category": "Discovery",
+          "documentId": "ARC-001-RSCH-v1.0"
         }
       ],
       "diagrams": [],
