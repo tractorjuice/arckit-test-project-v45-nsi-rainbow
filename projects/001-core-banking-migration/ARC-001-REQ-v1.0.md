@@ -6,12 +6,12 @@
 
 | Field | Value |
 |-------|-------|
-| **Document ID** | ARC-001-REQ-v1.0 |
+| **Document ID** | ARC-001-REQ-v1.1 |
 | **Document Type** | Business and Technical Requirements |
 | **Project** | NS&I Core Banking Migration (Project 001) |
 | **Classification** | OFFICIAL |
 | **Status** | DRAFT |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Created Date** | 2026-02-13 |
 | **Last Modified** | 2026-02-13 |
 | **Review Cycle** | Monthly |
@@ -26,6 +26,7 @@
 | Version | Date | Author | Changes | Approved By | Approval Date |
 |---------|------|--------|---------|-------------|---------------|
 | 1.0 | 2026-02-13 | ArcKit AI | Initial creation from `/arckit:requirements` command | PENDING | PENDING |
+| 1.1 | 2026-02-13 | ArcKit AI | Updated with PAC report (13 Feb 2026) findings: timeline assumption revised (PAC recommends stop targeting March 2028), Atos contract extension details (£474M without competitive bidding), procurement failure history, PAC-specific recommendations | PENDING | PENDING |
 
 ## Document Purpose
 
@@ -50,7 +51,7 @@ NS&I (National Savings and Investments) is the UK's state-owned savings bank, se
 The Core Banking Migration workstream replaces the Atos legacy platform with SBS (Sopra Banking Software) SBP Digital Core — a cloud-native banking engine. This is classified as "extremely high-risk" by the PAC. The migration must move 24 million customer accounts and £230 billion in assets from one platform to another with zero service disruption, while rebuilding NS&I's internal capability and restoring confidence with Treasury, Parliament, and the public.
 
 ### Objectives
-- **O1**: Replace the Atos legacy core banking engine with SBS SBP Digital Core by 2028 (addresses Goal G-4)
+- **O1**: Replace the Atos legacy core banking engine with SBS SBP Digital Core (target date under review — PAC recommended NS&I stop targeting March 2028 and develop a realistic bottom-up plan; addresses Goal G-4)
 - **O2**: Migrate all 24 million customer accounts with zero data loss and zero service disruption (addresses Goal G-2)
 - **O3**: Achieve full regulatory compliance (NCSC CAF, PCI DSS, UK GDPR, FCA, PRA) for the new platform before customer migration (addresses Goal G-7)
 - **O4**: Establish a credible, independently validated cost baseline with monthly EVM reporting (addresses Goal G-1)
@@ -190,7 +191,7 @@ The Core Banking Migration workstream replaces the Atos legacy platform with SBS
 
 **Description**: Execute the contractual exit from Atos including complete knowledge transfer, documented legacy system behaviours, and verified data extraction, with Atos service levels maintained at contractual SLA throughout the transition and exit completed within 12 months of SBS go-live.
 
-**Rationale**: The Atos relationship spans 27 years with deep institutional knowledge (SD-8). A poorly managed exit risks service disruption (SD-5), knowledge loss, and contractual disputes. Addresses Goal G-5 and Outcome O-5. Aligns with Principle P7 (Vendor Independence).
+**Rationale**: The Atos relationship spans 27 years with deep institutional knowledge (SD-8). The original contract (awarded 2014, due to expire 2021) has been extended twice without competitive bidding at an additional value of £474.4M (NAO, November 2025), with the extension to March 2028 estimated at £530M to cover unfilled successor contracts. Of five planned successor contracts, one failed and was re-run, one was awarded then terminated, and one was abandoned (NAO). A poorly managed exit risks service disruption (SD-5), knowledge loss, and contractual disputes. In 2025, 750 customer service agents and 350 back-office staff were transferred to a new supplier, but core banking operations remain with Atos. Addresses Goal G-5 and Outcome O-5. Aligns with Principle P7 (Vendor Independence).
 
 **Success Criteria**:
 - 100% of critical legacy systems documented (system behaviours, data flows, configuration)
@@ -206,14 +207,14 @@ The Core Banking Migration workstream replaces the Atos legacy platform with SBS
 
 ---
 
-### BR-6: Deliver SBS Platform by 2028
+### BR-6: Deliver SBS Platform (Timeline Under Review)
 
-**Description**: Complete SBS SBP Digital Core integration, configuration, and testing to achieve full functional, performance, and security accreditation by Q2 2028, with all NS&I savings products operational on the new platform.
+**Description**: Complete SBS SBP Digital Core integration, configuration, and testing to achieve full functional, performance, and security accreditation, with all NS&I savings products operational on the new platform. **Note**: The PAC (13 Feb 2026) explicitly recommended NS&I stop targeting March 2028 and instead develop a realistic bottom-up integrated plan — the go-live date is therefore under review pending NS&I's response to PAC recommendations.
 
-**Rationale**: The SBS platform is the technical foundation for the entire modernisation (SD-4, SD-9). The PAC noted "main work has yet to start" on core banking replacement. The 2028 target represents the earliest credible go-live given programme history. Addresses Goal G-4 and Outcome O-2. Aligns with Principle P1 (Cloud-Native by Default).
+**Rationale**: The SBS platform is the technical foundation for the entire modernisation (SD-4, SD-9). The PAC noted "main work has yet to start" on core banking replacement. The PAC Chair warned the "taxpayer is at serious risk of throwing good money after bad" and that any plan must be built from the ground up rather than reverse-engineered around optimistic dates. The Bank of England's RTGS system replacement (£431M, delivered on schedule) was cited as an unfavourable benchmark. Addresses Goal G-4 and Outcome O-2. Aligns with Principle P1 (Cloud-Native by Default).
 
 **Success Criteria**:
-- SBS platform achieves "Ready for Live" accreditation (functional, performance, security) by Q2 2028
+- SBS platform achieves "Ready for Live" accreditation (functional, performance, security) — target date to be confirmed via bottom-up integrated plan per PAC recommendation
 - 100% of NS&I savings products configured, tested, and operational on SBS
 - Performance testing confirms platform handles 150% of peak load (Premium Bonds draw day)
 - API-first integration architecture with zero direct database dependencies between modules
@@ -1444,7 +1445,7 @@ The Core Banking Migration workstream replaces the Atos legacy platform with SBS
 
 ### Business Constraints
 
-**BC-1**: The 2028 target go-live for SBS platform is a hard constraint communicated to Parliament. Slippage requires Ministerial notification.
+**BC-1**: The 2028 target go-live for SBS platform was communicated to Parliament but the PAC (13 Feb 2026) explicitly recommended NS&I **stop targeting March 2028** and instead develop a realistic bottom-up integrated plan with credible timelines. This constraint is now under review — NS&I must respond to PAC recommendations within 60 days. Any revised timeline requires Ministerial notification and Treasury approval.
 
 **BC-2**: Total programme budget includes the additional £109M approved in January 2026, subject to parliamentary approval. No additional funding assumed.
 

@@ -6,12 +6,12 @@
 
 | Field | Value |
 |-------|-------|
-| **Document ID** | ARC-001-RISK-v1.0 |
+| **Document ID** | ARC-001-RISK-v1.1 |
 | **Document Type** | Risk Register |
 | **Project** | NS&I Core Banking Migration (Project 001) |
 | **Classification** | OFFICIAL |
 | **Status** | DRAFT |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Created Date** | 2026-02-13 |
 | **Last Modified** | 2026-02-13 |
 | **Review Cycle** | Monthly |
@@ -26,6 +26,7 @@
 | Version | Date | Author | Changes | Approved By | Approval Date |
 |---------|------|--------|---------|-------------|---------------|
 | 1.0 | 2026-02-13 | ArcKit AI | Initial creation from `/arckit:risk` command | PENDING | PENDING |
+| 1.1 | 2026-02-13 | ArcKit AI | Updated with PAC (13 Feb 2026) and NAO (14 Nov 2025) specifics: Atos contract extension £474M without competitive bidding, procurement failure history, new R-021 (Atos contract extension cost exposure), updated R-019 with financial restructuring detail | PENDING | PENDING |
 
 ### Source Documents
 
@@ -42,7 +43,7 @@
 
 ### Risk Profile Overview
 
-**Total Risks Identified:** 20 risks across 6 categories
+**Total Risks Identified:** 21 risks across 6 categories
 
 | Risk Level | Inherent | Residual | Change |
 |------------|----------|----------|--------|
@@ -97,7 +98,7 @@ This programme carries a risk profile that is significantly above typical govern
 
 **Key Findings:**
 - Heavy concentration of critical risks in STRATEGIC and OPERATIONAL categories — reflecting organisational capability gaps and technical complexity
-- 7 of 20 risks exceed appetite even after controls — programme cannot proceed without Board and Treasury acceptance
+- 8 of 21 risks exceed appetite even after controls — programme cannot proceed without Board and Treasury acceptance
 - The single highest residual risk (R-001: culture) is non-technical — no amount of technology controls can mitigate a governance culture problem
 - Atos transition creates a cluster of 4 interdependent risks (R-003, R-004, R-005, R-019) — failure of any one cascades to the others
 - NS&I CEO owns 5 risks personally — disproportionate concentration that could overwhelm executive bandwidth
@@ -918,15 +919,15 @@ Premium Bonds draw is computationally intensive, algorithmically complex, and ha
 **Risk Owner:** Programme Director
 **Action Owner:** NS&I Operations Director
 
-**Risk Description:** Atos's own financial restructuring leads to reduced investment in the NS&I account, degraded service quality, or staff redeployment during the critical transition period. Atos must maintain SLA compliance while transitioning out — but the commercial incentive to invest diminishes as exit approaches.
+**Risk Description:** Atos's own financial restructuring leads to reduced investment in the NS&I account, degraded service quality, or staff redeployment during the critical transition period. The Atos contract (originally awarded 2014, due to expire 2021) has been extended twice **without competitive bidding** at an additional value of **£474.4 million** (NAO, November 2025). The extension to March 2028 is estimated to cost **£530 million** to cover unfilled successor contracts. Atos must maintain SLA compliance while transitioning out — but the commercial incentive to invest diminishes as exit approaches. In 2025, 750 customer service agents and 350 back-office staff were transferred to a new supplier, but core banking operations remain solely with Atos.
 
-**Inherent Assessment:** Likelihood 3 (Possible) × Impact 4 (Major) = **12** (Medium)
+**Inherent Assessment:** Likelihood 4 (Likely) × Impact 4 (Major) = **16** (High) *(increased from 12 — NAO evidence of procurement failures and non-competitive extensions increases likelihood)*
 
-**Current Controls:** Contractual SLA obligations with financial penalties; joint steering committee; escalation path to Atos UK leadership. **Effectiveness: Adequate.**
+**Current Controls:** Contractual SLA obligations with financial penalties; joint steering committee; escalation path to Atos UK leadership; David Goldstone (HMT Advisor) oversight. **Effectiveness: Adequate.**
 
-**Residual Assessment:** Likelihood 2 (Unlikely) × Impact 4 (Major) = **8** (Medium)
+**Residual Assessment:** Likelihood 3 (Possible) × Impact 4 (Major) = **12** (Medium) *(increased from 8 — Atos financial exposure is larger than originally assessed)*
 
-**Response:** TREAT — Monitor SLA closely; early escalation if degradation detected; contingency for accelerated self-service if Atos capacity fails.
+**Response:** TREAT — Monitor SLA closely; early escalation if degradation detected; contingency for accelerated self-service if Atos capacity fails; David Goldstone to review Atos contract value-for-money as part of Treasury oversight.
 
 ---
 
@@ -946,6 +947,41 @@ Premium Bonds draw is computationally intensive, algorithmically complex, and ha
 **Residual Assessment:** Likelihood 3 (Possible) × Impact 2 (Minor) = **6** (Medium)
 
 **Response:** TOLERATE — Political risk cannot be controlled; programme designed for incremental value delivery (P9) to demonstrate progress regardless of political changes.
+
+---
+
+### Risk R-021: Atos Contract Extension Cost Exposure and Procurement Failure Pattern
+
+**Category:** FINANCIAL
+**Status:** Open
+**Risk Owner:** NS&I CFO
+**Action Owner:** Programme Director
+
+**Risk Description:** The pattern of failed successor procurements — of five contracts planned to replace the Atos deal, one failed and was re-run, one was awarded then terminated, and one was abandoned due to disagreement on terms (NAO, November 2025) — repeats during the core banking migration phase. Each procurement failure extends Atos dependency at premium non-competitive rates (£474.4M in extensions already awarded without competitive bidding). If the SBS deployment is delayed beyond 2028, a further Atos extension would be required at estimated costs of £150-200M per year, without competitive leverage. The PAC warned the "taxpayer is at serious risk of throwing good money after bad".
+
+**Root Cause:** NS&I had "limited experience" in complex technology procurement (NAO); disaggregation of a 27-year integrated outsourcing contract into multiple specialist contracts proved more complex than anticipated; insufficient commercial and procurement capability within NS&I.
+
+**Trigger Events:** SBS deployment delay beyond March 2028; additional successor contract failures; Atos leveraging monopoly position during extensions.
+
+**Consequences if Realized:** £150-200M per year in non-competitive Atos extension costs; total programme cost escalates beyond £3bn; further PAC criticism and potential programme cancellation review; Treasury intervention escalates.
+
+**Affected Stakeholders:** HM Treasury (SD-1), PAC (SD-2), NS&I CFO (SD-7), UK Taxpayers
+
+**Inherent Assessment:** Likelihood 4 (Likely) × Impact 5 (Catastrophic) = **20** (Critical)
+
+**Current Controls:** David Goldstone (HMT Advisor) oversight of programme costs; PA Consulting recovery plan informing commercial strategy; Treasury spend control approvals; NAO monitoring. **Effectiveness: Weak** — controls are advisory and monitoring-focused, not preventive.
+
+**Residual Assessment:** Likelihood 3 (Possible) × Impact 5 (Catastrophic) = **15** (High)
+
+**Response:** TREAT
+
+**Key Actions:**
+1. Conduct forensic review of the five predecessor procurement failures — identify lessons learned and apply to core banking procurement — Owner: Programme Director — Due: 2026-05-30
+2. Negotiate Atos extension pricing caps and benchmarking clauses for any further extensions — Owner: CFO — Due: 2026-06-30
+3. Develop contingency plan for SBS delay scenarios including alternative supplier options — Owner: Programme Director — Due: 2026-07-30
+4. Submit resource management strategy to PAC within 6 months (per PAC recommendation) including procurement capability assessment — Owner: Programme Director — Due: 2026-08-13
+
+**Risk Appetite Assessment:** **Significantly Exceeds Appetite** — Financial category appetite is Medium (12); this risk scores 15 residual. **Escalation Required**: Yes — escalate to NS&I Board and HM Treasury immediately.
 
 ---
 
@@ -975,14 +1011,14 @@ Premium Bonds draw is computationally intensive, algorithmically complex, and ha
 
 ### FINANCIAL Risks
 
-**Total:** 3 (R-009, R-010, R-011)
-**Average Inherent Score:** 16.0 (High)
-**Average Residual Score:** 8.7 (Medium)
-**Control Effectiveness:** 46% reduction
+**Total:** 4 (R-009, R-010, R-011, R-021)
+**Average Inherent Score:** 17.0 (High)
+**Average Residual Score:** 9.8 (Medium)
+**Control Effectiveness:** 43% reduction
 
-**Key Themes:** Cost overrun risk is well-understood given programme history. Controls (EVM, cost assurance, contingency) are effective but the programme's track record of cost escalation makes this category inherently elevated.
+**Key Themes:** Cost overrun risk is well-understood given programme history. The NAO's finding of £474.4M in non-competitive Atos contract extensions and the pattern of failed successor procurements (R-021) adds a new dimension to financial risk. Controls (EVM, cost assurance, contingency, David Goldstone oversight) are effective but the programme's track record of cost escalation makes this category inherently elevated.
 
-**Category Risk Profile:** ⚠️ Concerning — R-009 exceeds appetite; programme history amplifies political impact of any overrun
+**Category Risk Profile:** 🔴 Critical — R-009 and R-021 both exceed appetite; Atos contract extension pattern creates ongoing uncontrolled cost exposure; programme history amplifies political impact of any overrun
 
 ### COMPLIANCE/REGULATORY Risks
 
@@ -1082,7 +1118,7 @@ Premium Bonds draw is computationally intensive, algorithmically complex, and ha
 
 **Overall Appetite Compliance:** ❌ 5 of 6 categories have risks exceeding appetite (11 individual risk exceedances)
 
-**Board/Treasury Approval Required for:** R-001, R-002, R-003, R-005, R-006, R-009, R-013, R-016, R-017, R-019 (10 of 20 risks)
+**Board/Treasury Approval Required for:** R-001, R-002, R-003, R-005, R-006, R-009, R-013, R-016, R-017, R-019, R-021 (11 of 21 risks)
 
 ---
 
@@ -1194,7 +1230,7 @@ Premium Bonds draw is computationally intensive, algorithmically complex, and ha
 
 ## K. Orange Book Compliance Checklist
 
-- ✅ **A. Governance and Leadership**: All 20 risks have named owners from senior stakeholder RACI matrix; escalation paths defined to NS&I Board and HM Treasury; risk appetite thresholds set and monitored
+- ✅ **A. Governance and Leadership**: All 21 risks have named owners from senior stakeholder RACI matrix; escalation paths defined to NS&I Board and HM Treasury; risk appetite thresholds set and monitored
 - ✅ **B. Integration**: Risks linked to stakeholder goals (G-1 to G-8), requirements (BR/FR/NFR), and architecture principles (P1-P10); risk register feeds into SOBC Management Case
 - ✅ **C. Collaboration and Best Information**: Risks sourced from stakeholder analysis (4 conflict-derived risks), requirements analysis (8 risk items), and principle compliance assessment
 - ✅ **D. Risk Management Processes**: Systematic identification across 6 categories; consistent 5×5 assessment; 4Ts response framework; inherent and residual risk tracked with justification

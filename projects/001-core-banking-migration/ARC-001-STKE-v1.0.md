@@ -11,7 +11,7 @@
 | **Project** | NS&I Core Banking Migration (Project 001) |
 | **Classification** | OFFICIAL |
 | **Status** | DRAFT |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Created Date** | 2026-02-13 |
 | **Last Modified** | 2026-02-13 |
 | **Review Cycle** | Monthly |
@@ -26,6 +26,7 @@
 | Version | Date | Author | Changes | Approved By | Approval Date |
 |---------|------|--------|---------|-------------|---------------|
 | 1.0 | 2026-02-13 | ArcKit AI | Initial creation from `/arckit:stakeholders` command | PENDING | PENDING |
+| 1.1 | 2026-02-13 | ArcKit AI | Updated with PAC report (13 Feb 2026) and NAO report (14 Nov 2025) specifics: named individuals (Dax Harkins, Matt Smith, David Goldstone), vendor ecosystem, staff transfers, Atos contract extension details, PAC recommendations | PENDING | PENDING |
 
 ---
 
@@ -42,7 +43,7 @@ The Core Banking Migration has an unusually complex stakeholder landscape driven
 - **CSF-2**: Transparent, evidence-based cost reporting that satisfies PAC, NAO, and Treasury requirements
 - **CSF-3**: Successful parallel-run of Atos and SBS platforms with automated data reconciliation proving zero data loss
 - **CSF-4**: Demonstrable build-up of NS&I in-house technical capability (minimum 30% permanent staff on programme)
-- **CSF-5**: Achievement of 2028 go-live for SBS Digital Core without scope erosion or further cost overruns
+- **CSF-5**: Development of a realistic, bottom-up integrated delivery plan with credible timelines and costs — the PAC (13 Feb 2026) explicitly recommended NS&I **stop targeting March 2028** and instead build a plan from the ground up rather than reverse-engineering around optimistic dates
 
 ### Stakeholder Alignment Score
 **Overall Alignment**: MEDIUM
@@ -57,9 +58,10 @@ While all stakeholders share the overarching goal of replacing the legacy platfo
 
 | Stakeholder | Role/Department | Influence | Interest | Engagement Strategy |
 |-------------|----------------|-----------|----------|---------------------|
-| NS&I Chief Executive | Executive Agency Head | HIGH | HIGH | Programme board chair, monthly 1:1 with Treasury sponsor |
+| Dax Harkins (NS&I Chief Executive) | Executive Agency Head | HIGH | HIGH | Programme board chair, monthly 1:1 with Treasury sponsor |
 | NS&I Chief Technology Officer | Technology Leadership | HIGH | HIGH | Architecture review authority, weekly steering |
 | NS&I Chief Finance Officer | Finance & Budgets | HIGH | HIGH | Monthly cost assurance, EVM reporting |
+| Matt Smith (Programme SRO) | Senior Responsible Owner | HIGH | HIGH | Programme board, Treasury reporting, PAC evidence |
 | Programme Director (Core Banking) | Programme Delivery | HIGH | HIGH | Daily stand-ups, weekly steering, gate reviews |
 | NS&I Chief Architect | Architecture & Design | MEDIUM | HIGH | Architecture review board, design authority |
 | NS&I Chief Information Security Officer | Security & Compliance | HIGH | HIGH | Security gate reviews, threat modelling sign-off |
@@ -76,13 +78,19 @@ While all stakeholders share the overarching goal of replacing the legacy platfo
 | Stakeholder | Organisation | Relationship | Influence | Interest |
 |-------------|--------------|--------------|-----------|----------|
 | HM Treasury Sponsor Team | HM Treasury | Sponsoring department | HIGH | HIGH |
+| David Goldstone (HMT Advisor) | HM Treasury | Programme oversight advisor (appointed Dec 2025) | HIGH | HIGH |
 | Public Accounts Committee (PAC) | Parliament | Parliamentary scrutiny | HIGH | HIGH |
 | National Audit Office (NAO) | Independent auditor | Audit & assurance | HIGH | HIGH |
 | Geoffrey Clifton-Brown MP | PAC Chair | Political accountability | HIGH | HIGH |
 | Infrastructure & Projects Authority (IPA) | Cabinet Office | Programme assurance | HIGH | MEDIUM |
 | Atos (UK & Ireland) | Incumbent vendor | Legacy platform operator | HIGH | HIGH |
 | SBS (Sopra Banking Software) | New platform vendor | SBP Digital Core delivery | HIGH | HIGH |
-| System Integrator(s) / Consultants | Various | Delivery partners | MEDIUM | HIGH |
+| PA Consulting | Consultancy | Recovery plan authors (commissioned July 2024) | MEDIUM | HIGH |
+| Capgemini | Consultancy / SI | Delivery partner | MEDIUM | HIGH |
+| EY | Consultancy | Advisory services | MEDIUM | HIGH |
+| IBM | Technology / SI | Technology delivery | MEDIUM | HIGH |
+| Sopra Steria | Technology / SI | Delivery partner (related to SBS parent group) | MEDIUM | HIGH |
+| Actica Consulting | Consultancy | Specialist advisory | LOW | HIGH |
 | NS&I Customers (24 million) | Public | End users / beneficiaries | LOW | HIGH |
 | UK Taxpayers (via Parliament) | Public | Funders | LOW | MEDIUM |
 | Financial Conduct Authority (FCA) | Regulator | Consumer protection | HIGH | MEDIUM |
@@ -100,16 +108,18 @@ While all stakeholders share the overarching goal of replacing the legacy platfo
             │                     │                     │
             │   KEEP SATISFIED    │   MANAGE CLOSELY    │
             │                     │                     │
-   High     │  • FCA              │  • NS&I CEO         │
+   High     │  • FCA              │  • Dax Harkins (CEO)│
             │  • PRA              │  • NS&I CTO         │
             │  • NCSC             │  • NS&I CFO         │
-            │  • IPA              │  • Programme Dir.    │
-            │  • Internal Audit   │  • HM Treasury      │
+            │  • IPA              │  • Matt Smith (SRO) │
+            │  • Internal Audit   │  • Programme Dir.    │
+            │                     │  • HM Treasury      │
+            │                     │  • D. Goldstone (HMT)│
             │                     │  • PAC / NAO        │
-            │                     │  • CISO             │
-   P        │                     │  • Ops Director     │
-   O        │                     │  • Atos             │
-   W        │                     │  • SBS              │
+   P        │                     │  • CISO             │
+   O        │                     │  • Ops Director     │
+   W        │                     │  • Atos             │
+            │                     │  • SBS              │
    E        ├─────────────────────┼─────────────────────┤
    R        │                     │                     │
             │      MONITOR        │    KEEP INFORMED    │
@@ -120,14 +130,17 @@ While all stakeholders share the overarching goal of replacing the legacy platfo
             │                     │  • Delivery Teams   │
             │                     │  • DPO              │
             │                     │  • HR Director      │
-            │                     │  • Consultants / SI │
+            │                     │  • PA Consulting    │
+            │                     │  • Capgemini / EY   │
             │                     │                     │
             └─────────────────────┴─────────────────────┘
 ```
 
 | Stakeholder | Power | Interest | Quadrant | Engagement Strategy |
 |-------------|-------|----------|----------|---------------------|
-| NS&I Chief Executive | HIGH | HIGH | Manage Closely | Weekly programme board, monthly Treasury liaison |
+| Dax Harkins (NS&I CEO) | HIGH | HIGH | Manage Closely | Weekly programme board, monthly Treasury liaison |
+| Matt Smith (Programme SRO) | HIGH | HIGH | Manage Closely | Programme board, Treasury reporting, PAC evidence sessions |
+| David Goldstone (HMT Advisor) | HIGH | HIGH | Manage Closely | Monthly programme reviews, cost assurance, Treasury reporting |
 | NS&I CTO | HIGH | HIGH | Manage Closely | Weekly steering, architecture review board chair |
 | NS&I CFO | HIGH | HIGH | Manage Closely | Monthly EVM reviews, cost assurance gates |
 | Programme Director | HIGH | HIGH | Manage Closely | Daily stand-ups, weekly steering, gate owner |
@@ -149,7 +162,8 @@ While all stakeholders share the overarching goal of replacing the legacy platfo
 | DPO | MEDIUM | HIGH | Keep Informed | DPIA reviews, data migration governance |
 | HR Director | MEDIUM | MEDIUM | Keep Informed | Skills assessment updates, recruitment progress |
 | Delivery Teams | LOW | HIGH | Keep Informed | Sprint ceremonies, technical brown bags |
-| System Integrators / Consultants | MEDIUM | HIGH | Keep Informed | Delivery milestones, knowledge transfer checkpoints |
+| PA Consulting | MEDIUM | HIGH | Keep Informed | Recovery plan delivery, knowledge transfer milestones |
+| Capgemini / EY / IBM / Sopra Steria | MEDIUM | HIGH | Keep Informed | Delivery milestones, knowledge transfer checkpoints |
 | CCS | MEDIUM | LOW | Monitor | Procurement compliance checks at contract events |
 | UK Taxpayers | LOW | MEDIUM | Monitor | NAO reports, PAC publications |
 
@@ -201,7 +215,7 @@ The programme has already cost an estimated £3bn by end of 2024, with costs inc
 **Driver Statement**: Ensure NS&I can demonstrate a credible, costed plan for completing the core banking migration, with honest reporting on progress, risks, and costs, and clear accountability for decisions and spend.
 
 **Context & Background**:
-The PAC's February 2026 report described the programme as a "full-spectrum disaster". Specific findings: NS&I has "no workable plan" after five years; NS&I "lacks the skills" to deliver; NS&I has "no idea of the eventual cost"; a "good news culture" prevents honest reporting; and £43m was spent on consultants with NS&I "vague on how it holds them to account". The PAC has made formal recommendations that NS&I must respond to within 60 days. Future evidence sessions are expected as the programme progresses.
+The PAC's February 2026 report (published 13 February 2026) described the programme as a "full-spectrum disaster". PAC Chair Sir Geoffrey Clifton-Brown stated: *"It is perhaps unsurprising that this upbeat name [Project Rainbow] was retired as aptly our report finds it has been a full-spectrum disaster"* and warned that *"the taxpayer is at serious risk of throwing good money after bad"*. Specific findings: NS&I has "no workable plan" after five years; NS&I "lacks the skills" to deliver; NS&I has "no idea of the eventual cost"; NS&I was "bullishly confident" despite poor delivery record; a "good news culture" prevents honest reporting; and £43m was spent on consultants with NS&I "vague on how it holds them to account". The PAC made six overarching recommendations including: (1) stop targeting March 2028 and develop a realistic bottom-up integrated plan; (2) within six months submit a resource management strategy including consultant use; (3) improve supplier and contract management for the multi-supplier model; and (4) Treasury must clarify how it will assess the integrated plan and what lessons it has learned. NS&I must respond to these recommendations within 60 days. The Bank of England's Real-Time Gross Settlement (RTGS) system replacement — delivered for £431 million on schedule — was cited as an unfavourable benchmark. Future evidence sessions are expected as the programme progresses.
 
 **Driver Intensity**: CRITICAL
 
@@ -375,7 +389,7 @@ The PAC found NS&I was "unable to tell the PAC how much had been spent" to date 
 **Driver Statement**: Execute a commercially acceptable exit from the NS&I outsourcing contract, fulfil knowledge transfer obligations, maintain service levels during the transition period, and protect Atos's reputation as a responsible transition partner.
 
 **Context & Background**:
-Atos has operated NS&I's core banking and back-office operations since 1999 — a 27-year relationship. The company is also navigating its own financial restructuring. Atos must maintain service levels during what could be a 2–3 year transition period while simultaneously supporting knowledge transfer to NS&I and SBS. There is an inherent tension: Atos has deep institutional knowledge that NS&I needs, but Atos's commercial incentive diminishes as the exit approaches. Key personnel may leave or be redeployed.
+Atos has operated NS&I's core banking and back-office operations since 1999 — a 27-year relationship. The company is also navigating its own financial restructuring. The original contract (awarded 2014, due to expire 2021) has been extended twice — first to 2024, then to March 2028 — both **without competitive bidding**, at an additional value of **£474.4 million** (NAO, November 2025). The NAO estimates the Atos extension to cover unfilled successor contracts costs approximately **£530 million**. In 2025, **750 customer service agents** and **350 back-office staff** were transferred from Atos to a new supplier, but core banking operations remain with Atos. Atos must maintain service levels during the transition period while simultaneously supporting knowledge transfer to NS&I and SBS. There is an inherent tension: Atos has deep institutional knowledge that NS&I needs, but Atos's commercial incentive diminishes as the exit approaches. Key personnel may leave or be redeployed. Of the five successor contracts originally planned to replace the Atos deal, the NAO found that two were awarded as planned, one procurement initially failed and was re-run, one was awarded but subsequently terminated, and one was abandoned due to disagreement on terms.
 
 **Driver Intensity**: HIGH
 
@@ -569,16 +583,45 @@ The Chief Architect must ensure that the migration to SBS does not simply replac
 
 ---
 
-### SD-15: System Integrators / Consultants — Delivery and Accountability
+### SD-15: David Goldstone (HM Treasury Advisor) — Programme Oversight and Recovery
 
-**Stakeholder**: External consultants and system integrators
+**Stakeholder**: David Goldstone, HM Treasury Programme Advisor (appointed December 2025)
+
+**Driver Category**: STRATEGIC / RISK / COMPLIANCE
+
+**Driver Statement**: Provide independent Treasury-level oversight of programme delivery, cost control, and risk management, ensuring NS&I develops a credible recovery plan and that the additional £109M funding delivers measurable progress.
+
+**Context & Background**:
+David Goldstone was appointed by HM Treasury in December 2025 as a dedicated programme advisor — a direct response to the NAO's November 2025 finding that Treasury "found it challenging to understand the costs and progress being made". His appointment signals Treasury's escalation of direct intervention. Goldstone's role is to provide Treasury with an independent line of sight into programme reality, cutting through the "good news culture" the PAC identified. He is effectively Treasury's eyes and ears inside the programme. His assessments will directly influence whether Treasury approves further funding requests or triggers programme cancellation review.
+
+**Driver Intensity**: HIGH
+
+**Enablers**:
+- Unfettered access to programme data, financials, and risk registers
+- Direct reporting line to HM Treasury (independent of NS&I management)
+- Authority to commission independent reviews and audits
+- Access to IPA delivery confidence reviews
+
+**Blockers**:
+- NS&I "good news" culture filtering information before it reaches Goldstone
+- Lack of reliable programme data (NS&I unable to explain total spending to PAC)
+- Potential tension between advisory role and NS&I management authority
+- Compressed timeline to demonstrate value before next Treasury review
+
+**Related Stakeholders**: HM Treasury Sponsor Team (reporting line), Dax Harkins (NS&I CEO), Matt Smith (Programme SRO), PAC (ultimate accountability)
+
+---
+
+### SD-16: System Integrators / Consultants — Delivery and Accountability
+
+**Stakeholder**: PA Consulting, Capgemini, EY, IBM, Sopra Steria, Actica Consulting
 
 **Driver Category**: FINANCIAL / OPERATIONAL
 
 **Driver Statement**: Deliver contracted programme milestones while demonstrating clear value for money and measurable knowledge transfer to NS&I permanent staff, operating under enhanced accountability frameworks in response to PAC criticism of the £43m consultant spend.
 
 **Context & Background**:
-The PAC found NS&I was "vague on how it holds [consultants] to account" despite spending £43m on external advisory services. Going forward, all consultant engagements must have defined deliverables (not just time-and-materials), measurable knowledge transfer outcomes, and clear accountability. The consultant community has a reputational interest in the programme succeeding — but also a commercial interest in extended engagements.
+The PAC found NS&I was "vague on how it holds [consultants] to account" despite spending £43m on external advisory services. The NAO identified six named consultancies involved in the programme: **PA Consulting** (commissioned July 2024 for the programme recovery plan), **Capgemini**, **EY**, **IBM**, **Sopra Steria**, and **Actica Consulting**. Going forward, all consultant engagements must have defined deliverables (not just time-and-materials), measurable knowledge transfer outcomes, and clear accountability. The PAC recommended that within **six months** NS&I must submit a resource management strategy including consultant use. The consultant community has a reputational interest in the programme succeeding — but also a commercial interest in extended engagements. PA Consulting's recovery plan (commissioned July 2024) is the basis for the current programme reset.
 
 **Driver Intensity**: MEDIUM
 

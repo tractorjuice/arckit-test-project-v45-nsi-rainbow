@@ -6,12 +6,12 @@
 
 | Field | Value |
 |-------|-------|
-| **Document ID** | ARC-001-RSCH-v1.0 |
+| **Document ID** | ARC-001-RSCH-v1.1 |
 | **Document Type** | Technology and Service Research |
 | **Project** | NS&I Core Banking Migration (Project 001) |
 | **Classification** | OFFICIAL |
 | **Status** | DRAFT |
-| **Version** | 1.0 |
+| **Version** | 1.1 |
 | **Created Date** | 2026-02-13 |
 | **Last Modified** | 2026-02-13 |
 | **Review Cycle** | Quarterly |
@@ -26,6 +26,7 @@
 | Version | Date | Author | Changes | Approved By | Approval Date |
 |---------|------|--------|---------|-------------|---------------|
 | 1.0 | 2026-02-13 | ArcKit AI | Initial creation from `/arckit:research` agent | PENDING | PENDING |
+| 1.1 | 2026-02-13 | ArcKit AI | Updated with PAC (13 Feb 2026) and NAO (14 Nov 2025) specifics: named consultancies, PA Consulting recovery plan, Bank of England RTGS benchmark, Atos contract extension details, PAC six recommendations, procurement failure history | PENDING | PENDING |
 
 ---
 
@@ -50,13 +51,29 @@ This document presents market research findings for technology, services, and ve
 
 ### Context: NS&I Programme Status (February 2026)
 
-**Critical Background**: The Public Accounts Committee described NS&I's digital modernisation programme as a **"full-spectrum disaster"** in February 2026:
+**Critical Background**: The Public Accounts Committee (report published 13 February 2026) described NS&I's digital modernisation programme as a **"full-spectrum disaster"**. PAC Chair Sir Geoffrey Clifton-Brown stated: *"It is perhaps unsurprising that this upbeat name [Project Rainbow] was retired as aptly our report finds it has been a full-spectrum disaster"* and warned *"the taxpayer is at serious risk of throwing good money after bad"*.
+
+**Key Facts (PAC/NAO):**
 - **£3 billion estimated cost** by end of 2024, with **£1.3 billion cost escalation** since inception
-- **£43 million spent on consultants** with "vague accountability"
-- **No workable plan after five years**, according to PAC Chair Geoffrey Clifton-Brown
-- **Core banking replacement "extremely high-risk"** and classified by IPA as "red" (delivery appears unachievable)
-- **March 2028 target already confirmed as unachievable** by NS&I CEO to MPs
+- **£43 million spent on consultants** (PA Consulting, Capgemini, EY, IBM, Sopra Steria, Actica Consulting) with "vague accountability"
+- **PA Consulting** commissioned July 2024 for the programme recovery plan — basis of current programme reset
+- **No workable plan after five years** — NS&I described as "bullishly confident" despite poor delivery record
+- **Core banking replacement "extremely high-risk"** — classified by IPA as "red" (delivery appears unachievable)
+- **Atos contract extended twice without competitive bidding** — additional value of **£474.4 million** (NAO); extension to March 2028 estimated at **£530 million**
+- **Procurement failure pattern**: Of 5 successor contracts, 1 failed and re-run, 1 awarded then terminated, 1 abandoned (NAO)
+- **750 customer service + 350 back-office staff** transferred to new supplier in 2025; core banking remains with Atos
+- **March 2028 target**: PAC explicitly recommends NS&I **stop targeting this date** and develop a realistic bottom-up plan
 - **£109 million additional funding** confirmed January 2026 (pending parliamentary approval)
+- **Bank of England RTGS** system replacement (£431M, delivered on schedule) cited as unfavourable benchmark
+- **Key individuals**: Dax Harkins (NS&I CEO), Matt Smith (Programme SRO), David Goldstone (HMT Advisor, appointed December 2025)
+
+**PAC Six Overarching Recommendations:**
+1. Stop targeting March 2028 — develop realistic bottom-up integrated plan with credible timelines and costs
+2. Within six months: submit resource management strategy including consultant use
+3. Improve supplier and contract management for multi-supplier model
+4. Treasury must clarify how it will assess the integrated plan and lessons learned from oversight
+5. NS&I must demonstrate it has embedded risk management framework
+6. Greater transparency in reporting progress
 
 This research is conducted in the shadow of this scrutiny. **Every technology decision must demonstrably reduce cost, timeline, and vendor dependency risks** or it will fuel further PAC criticism.
 
@@ -2567,10 +2584,11 @@ Research findings feed into Strategic Outline Business Case (SOBC) Economic Case
 **Data Sources**:
 - **Vendor websites and documentation**: Official pricing pages, product datasheets, case studies
 - **Analyst reports**: Gartner Peer Insights (Core Banking, Observability), Forrester Wave (Digital Banking)
-- **NAO Report (November 2025)**: NS&I Business Transformation Programme cost and delivery analysis
-- **PAC Report (February 2026)**: NS&I "full-spectrum disaster" findings and recommendations
+- **NAO Report (November 2025)**: NS&I Business Transformation Programme — cost and delivery analysis, procurement failure history, Atos contract extension details (£474.4M), named consultancies
+- **PAC Report (13 February 2026)**: "Full-spectrum disaster" findings, six overarching recommendations, Sir Geoffrey Clifton-Brown quotes, Bank of England RTGS benchmark
+- **PAC Inquiry Page**: [NS&I's transformation programme](https://committees.parliament.uk/work/9280/nsis-transformation-programme/) — evidence sessions, written evidence
 - **UK Government sources**: GOV.UK Notify pricing, Digital Marketplace G-Cloud 14 listings, TCoP guidance
-- **Industry publications**: Computer Weekly, Public Technology, The Register (NS&I programme coverage)
+- **Industry publications**: Computer Weekly, Public Technology, The Register, UK Authority, Global Government Finance, Meyka (NS&I programme coverage)
 - **GitHub**: Open source project metrics (stars, forks, last commit) for IaC tools, ELK alternatives
 - **G2 Reviews**: Customer reviews and ratings for Datadog, Solvexia, Snyk, Informatica
 
@@ -2658,8 +2676,11 @@ Research findings feed into Strategic Outline Business Case (SOBC) Economic Case
 
 | Document | Type | Source | Key Extractions | URL |
 |----------|------|--------|-----------------|-----|
-| NAO Report: NS&I Business Transformation Programme | Audit Report | National Audit Office | £3bn cost, £1.3bn overrun, 4-year delay, IPA "red" rating | https://www.nao.org.uk/reports/national-savings-investments-business-transformation-programme/ |
-| PAC Report: NS&I "Full-Spectrum Disaster" | Parliamentary Report | Public Accounts Committee | "No workable plan", "lacks skills", £43m consultant spend, "vague accountability" | https://committees.parliament.uk/committee/127/public-accounts-committee/news/211846/ |
+| NAO Report: NS&I Business Transformation Programme | Audit Report | National Audit Office (14 Nov 2025) | £3bn cost, £1.3bn overrun, 4-year delay, IPA "red" rating, Atos £474.4M extensions without competitive bidding, 5 successor contracts (2 OK, 1 failed/re-run, 1 terminated, 1 abandoned), named consultancies (PA Consulting, Capgemini, EY, IBM, Sopra Steria, Actica), £530M Atos extension estimate | https://www.nao.org.uk/reports/national-savings-investments-business-transformation-programme/ |
+| PAC Report: NS&I "Full-Spectrum Disaster" | Parliamentary Report | Public Accounts Committee (13 Feb 2026) | 6 recommendations: stop March 2028, bottom-up plan, 6-month resource strategy, improve supplier management, Treasury oversight clarification, embedded risk management. Clifton-Brown: "taxpayer at serious risk of throwing good money after bad". Bank of England RTGS £431M benchmark. Named: Dax Harkins (CEO), Matt Smith (SRO), David Goldstone (HMT, Dec 2025). 750+350 staff transferred 2025. | https://committees.parliament.uk/committee/127/public-accounts-committee/news/211846/ |
+| PAC Inquiry: NS&I's Transformation Programme | Parliamentary Inquiry | Public Accounts Committee | Evidence sessions, oral and written evidence, full report | https://committees.parliament.uk/work/9280/nsis-transformation-programme/ |
+| The Register: NS&I £3B IT overhaul "full-spectrum disaster" | Press Coverage | The Register (13 Feb 2026) | Detailed PAC findings, Bank of England RTGS comparison, Atos contract history | https://www.theregister.com/2026/02/13/nsandi_pac_latest/ |
+| Global Government Finance: NS&I Programme Analysis | Press Coverage | Global Government Finance | 750+350 staff transfer, £13bn raised for government (2025), David Goldstone appointment | https://www.globalgovernmentfinance.com/nsi-digital-transformation-programme-full-spectrum-disaster/ |
 | SBS Press Release: NS&I Core Banking Platform | Vendor Announcement | SBS Software | NS&I selects SBS SBP Digital Core on AWS; go-live 2028 | https://sbs-software.com/news/nsi-to-replace-legacy-core-banking-system-with-sbs-digital-cloud-native-platform/ |
 | GOV.UK Notify Pricing | Government Service | GDS | Email free; SMS £0.0165/message; letters £0.39-£0.69 | https://www.notifications.service.gov.uk/pricing |
 | Technology Code of Practice | Policy Guidance | Cabinet Office | 13 points for public sector technology decisions | https://www.gov.uk/guidance/the-technology-code-of-practice |
