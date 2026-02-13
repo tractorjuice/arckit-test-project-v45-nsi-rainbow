@@ -1,0 +1,81 @@
+{
+  "generated": "2026-02-13T12:00:00Z",
+  "repository": {
+    "owner": "tractorjuice",
+    "name": "arckit-test-project-v45-nsi-rainbow",
+    "branch": "main"
+  },
+  "defaultDocument": "projects/000-global/ARC-000-PRIN-v1.0.md",
+  "guides": [],
+  "global": [
+    {
+      "path": "projects/000-global/ARC-000-PRIN-v1.0.md",
+      "title": "Architecture Principles",
+      "category": "Architecture",
+      "documentId": "ARC-000-PRIN-v1.0",
+      "isDefault": true
+    }
+  ],
+  "globalExternal": [],
+  "globalPolicies": [],
+  "projects": [
+    {
+      "id": "001-core-banking-migration",
+      "name": "Core Banking Migration",
+      "documents": [
+        {
+          "path": "projects/001-core-banking-migration/ARC-001-STKE-v1.0.md",
+          "title": "Stakeholder Drivers",
+          "category": "Discovery",
+          "documentId": "ARC-001-STKE-v1.0"
+        },
+        {
+          "path": "projects/001-core-banking-migration/ARC-001-REQ-v1.0.md",
+          "title": "Requirements",
+          "category": "Discovery",
+          "documentId": "ARC-001-REQ-v1.0"
+        },
+        {
+          "path": "projects/001-core-banking-migration/ARC-001-RISK-v1.0.md",
+          "title": "Risk Register",
+          "category": "Governance",
+          "documentId": "ARC-001-RISK-v1.0"
+        }
+      ],
+      "diagrams": [],
+      "research": [],
+      "decisions": [],
+      "wardleyMaps": [],
+      "dataContracts": [],
+      "reviews": [],
+      "vendors": [],
+      "external": []
+    },
+    {
+      "id": "002-digital-channels",
+      "name": "Digital Channels",
+      "documents": [],
+      "diagrams": [],
+      "research": [],
+      "decisions": [],
+      "wardleyMaps": [],
+      "dataContracts": [],
+      "reviews": [],
+      "vendors": [],
+      "external": []
+    },
+    {
+      "id": "003-programme-governance",
+      "name": "Programme Governance",
+      "documents": [],
+      "diagrams": [],
+      "research": [],
+      "decisions": [],
+      "wardleyMaps": [],
+      "dataContracts": [],
+      "reviews": [],
+      "vendors": [],
+      "external": []
+    }
+  ]
+}
