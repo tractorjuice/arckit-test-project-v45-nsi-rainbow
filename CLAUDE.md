@@ -78,9 +78,21 @@ This project is organised into three workstreams:
 
 ## How to Work in This Repository
 
+### ArcKit Plugin
+
+ArcKit is loaded as a **marketplace plugin** from `tractorjuice/arc-kit` (configured in `.claude/settings.json`). There is no local `.arckit/` directory — all templates, scripts, and command definitions are provided by the plugin at runtime.
+
+### Reference Files
+
+The following reference files were part of the initial commit but are **deleted from the working directory**. Access them via git when needed:
+- `git show HEAD:DEPENDENCY-MATRIX.md` — full command dependency structure matrix (45 commands, 13 tiers)
+- `git show HEAD:VERSION` — ArcKit version (currently 2.4.4)
+- `git show HEAD:WORKFLOW-DIAGRAMS.md` — Mermaid workflow diagrams for 5 project paths
+- `git show HEAD:CHANGELOG.md` — project changelog
+
 ### ArcKit Slash Commands
 
-All artifacts are produced via `/arckit.*` commands. The recommended execution order follows the 12-tier dependency hierarchy in `DEPENDENCY-MATRIX.md` (M=Mandatory, R=Recommended, O=Optional):
+All artifacts are produced via `/arckit.*` commands. The recommended execution order follows the 12-tier dependency hierarchy in `DEPENDENCY-MATRIX.md` (M=Mandatory, R=Recommended, O=Optional). See `docs/README.md` for command category guides.
 
 | Tier | Phase | Key Commands |
 |------|-------|-------------|
@@ -101,12 +113,12 @@ The most-consumed artifacts are `requirements` (37 commands), `principles` (21 c
 
 ### Key Conventions
 
-- **Document IDs**: Format `ARC-{PROJECT_ID}-{TYPE}-v{VERSION}.md` (e.g., `ARC-001-REQ-v1.0.md`). Multi-instance types use `ARC-{PID}-{TYPE}-{NUM}-v{VERSION}.md`. Generate with `.arckit/scripts/bash/generate-document-id.sh`.
+- **Document IDs**: Format `ARC-{PROJECT_ID}-{TYPE}-v{VERSION}.md` (e.g., `ARC-001-REQ-v1.0.md`). Multi-instance types use `ARC-{PID}-{TYPE}-{NUM}-v{VERSION}.md`.
 - **Type codes**: PRIN, STKE, REQ, RISK, SOBC, STRAT, PLAT, DATA, DPIA, RSCH, SOW, EVAL, TRAC, ANLZ, BKLG, SRVN, DVOP, MLOP, FNOP, OPER, RDMP, TCOP, AIPL, ATRS, SECD, MSBD, JSP9, SVCA, STRY. Multi-instance: ADR, DIAG, WARD, DMC.
 - **Global artifacts** (principles) go in `projects/000-global/`
 - **Project-specific artifacts** go in `projects/{PROJECT_ID}/` with subdirectories: `decisions/`, `diagrams/`, `wardley-maps/`, `data-contracts/`, `reviews/`, `external/`, `vendors/`, `final/`
-- **Templates**: Default templates are provided by the ArcKit plugin. Custom overrides in `.arckit/templates/` or `.arckit/templates-custom/` take precedence. Always read the relevant template before generating a document.
-- **Version** is in the `VERSION` file (currently 2.4.4) — include in generated document metadata
+- **Templates**: Default templates are provided by the ArcKit plugin. Custom overrides can be placed in `.arckit/templates/` or `.arckit/templates-custom/` (neither exists yet in this project). Always read the relevant template before generating a document.
+- **Version**: Currently 2.4.4 (retrieve via `git show HEAD:VERSION` since the file is deleted from the working directory) — include in generated document metadata
 - **External documents**: Commands auto-discover user-provided files (vendor HLDs, policy docs, pen test reports) from `projects/{project}/external/`, `projects/{project}/vendors/{vendor}/`, and `projects/000-global/policies/`. These enhance output but are never required.
 
 ### Autonomous Agents
