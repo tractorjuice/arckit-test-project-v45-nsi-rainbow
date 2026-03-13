@@ -1,0 +1,39 @@
+{
+  "generated": "2026-03-13T11:22:20.957Z",
+  "scanned": {
+    "projects": 3,
+    "artifacts": 4
+  },
+  "summary": {
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 0,
+    "total": 0
+  },
+  "byType": {
+    "STALE-RSCH": 0,
+    "FORGOTTEN-ADR": 0,
+    "UNRESOLVED-COND": 0,
+    "STALE-EXT": 0,
+    "ORPHAN-REQ": 0,
+    "MISSING-TRACE": 0,
+    "VERSION-DRIFT": 0
+  },
+  "projects": [
+    {
+      "id": "001-core-banking-migration",
+      "artifacts": 4,
+      "findings": []
+    },
+    {
+      "id": "002-digital-channels",
+      "artifacts": 0,
+      "findings": []
+    },
+    {
+      "id": "003-programme-governance",
+      "artifacts": 0,
+      "findings": []
+    }
+  ]
+}
